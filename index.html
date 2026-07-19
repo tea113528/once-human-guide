@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>七日世界 - 游戏攻略站</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.400.0"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i data-lucide="gamepad-2" class="logo-icon"></i>
+        <span class="logo-text">七日世界</span>
+      </div>
+      <div class="nav-menu">
+        <a href="#" class="nav-link active" data-category="all">全部</a>
+        <a href="#" class="nav-link" data-category="角色">角色攻略</a>
+        <a href="#" class="nav-link" data-category="副本">副本攻略</a>
+        <a href="#" class="nav-link" data-category="装备">装备指南</a>
+        <a href="#" class="nav-link" data-category="玩法">玩法技巧</a>
+        <a href="#" class="nav-link" data-category="剧情">剧情解析</a>
+      </div>
+      <div class="nav-search">
+        <input type="text" id="searchInput" placeholder="搜索攻略..." class="search-input">
+        <i data-lucide="search" class="search-icon"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">七日世界</h1>
+      <p class="hero-subtitle">探索未知，战胜恐惧</p>
+      <button class="hero-btn" onclick="showAllGuides()">开始探索</button>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <section class="featured">
+    <div class="container">
+      <h2 class="section-title">热门攻略</h2>
+      <div class="featured-grid" id="featuredGrid">
+      </div>
+    </div>
+  </section>
+
+  <section class="guides">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">最新攻略</h2>
+        <div class="category-filter">
+          <button class="filter-btn active" data-filter="all">全部</button>
+          <button class="filter-btn" data-filter="角色">角色</button>
+          <button class="filter-btn" data-filter="副本">副本</button>
+          <button class="filter-btn" data-filter="装备">装备</button>
+          <button class="filter-btn" data-filter="玩法">玩法</button>
+          <button class="filter-btn" data-filter="剧情">剧情</button>
+        </div>
+      </div>
+      <div class="guide-grid" id="guideGrid">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>关于我们</h3>
+          <p>七日世界游戏攻略站，为玩家提供最新最全面的游戏攻略。</p>
+        </div>
+        <div class="footer-section">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="#">角色攻略</a></li>
+            <li><a href="#">副本攻略</a></li>
+            <li><a href="#">装备指南</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>联系我们</h3>
+          <p>如有问题或建议，请联系我们。</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 七日世界攻略站. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="guideModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-body" id="modalBody">
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
